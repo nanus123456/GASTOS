@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barra de Navegación</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="../estilos/styles2.css">
+    <link rel="stylesheet" href="../estilos/gastos.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-list">
+            <li><a href="proyectos_habilitados.html" class="nav-link active">Proyectos Habilitados</a></li>
+            <li><a href="proyecto.html" class="nav-link">Proyecto</a></li>
+            <li><a href="gastos.html" class="nav-link">Gastos</a></li>
+            <li>
+                <div class="logout-icon">
+                    <i class="fas fa-sign-out-alt"></i>
+                </div>
+            </li>
+        </ul>
+        
+    </nav>
+
+    <main>
+        <div class="form-container">
+            <h2>Registrar Gasto</h2>
+        <div id="alert" class="alert"></div>
+            
+            <form id="gastoForm" class="gasto-form">
+                <div class="form-group">
+                    <label for="proyecto">Proyecto</label>
+                    <select id="proyecto" name="proyecto">
+                        <option value="" disabled selected>Seleccione un proyecto</option>
+                        <option value="cuernavaca">Sucursal-Cuernavaca</option>
+                        <option value="valle">Sucursal-Valle de Bravo</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="tipo">Tipo de gasto</label>
+                    <select id="tipo" name="tipo">
+                        <option value="" disabled selected>Seleccione el tipo de gasto</option>
+                        <option value="ingreso">Ingreso</option>
+                        <option value="egreso">Egreso</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="monto">Monto</label>
+                    <input type="number" id="monto" name="monto" placeholder="$">
+                </div>
+                <button type="submit" class="submit-btn">Agregar</button>
+            </form>
+        </div>
+    
+    </main>
+    
+    <script src="../js/script.js"></script>
+    <script src="../js/gastos.js" ></script>
+</body>
+</html>
